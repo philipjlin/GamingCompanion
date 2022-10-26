@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Bootstrap JavaScript and JQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- CSS Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Oleo+Script&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7aa2b56b45.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="images/logo.png" />
+    <title>Gaming Companion</title>
+
+  </head>
+
+
+
+  <body>
+
+    <!-- Title section -->
+    <section id="title" class="container">
+
+      <h1 class="title">Gaming Companion</h1>
+
+      <h3 class="slogan">more play, less shuffle</h3>
+    </section>
+
+
+
+    <!-- Navigation section with nav bar -->
+    <section id="navigation" class="container">
+
+        <nav class="navbar navbar-expand-lg">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <hr />
+          <div class="collapse navbar-collapse" id=="#navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link dice-nav-link" href="#navigation"> Dice </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link cards-nav-link" href="#navigation"> Cards </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link pandemic-nav-link" href="#navigation"> Pandemic </a>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+
+    </section>
+
+
+
+    <!-- Table section where events happen -->
+    <section id="table" class="container">
+
+      <!-- Dice Game Elements -->
+      <div id="dice">
+
+        <h2 class="select">Select # Die:</h2>
+        <h2 class="select-text"> 1 </h2>
+        <h2 class="select-text"> 2 </h2>
+
+        <h2 class="result">Click To Roll!</h2>
+
+        <!-- How die are displayed depending on number of dice on the table -->
+        <div class="row dice-row one-dice-config">
+          <div class="col-lg-3 col-sm-3 dice">
+            <img class="dice-img dice1" src="images/dice1.png">
+          </div>
+        </div>
+
+
+        <div class="row dice-row two-dice-config">
+          <div class="col-lg-3 col-sm-3 dice">
+            <img class="dice-img dice1" src="images/dice1.png">
+          </div>
+
+          <div class="col-lg-3 col-sm-3 dice">
+            <img class="dice-img dice2" src="images/dice6.png">
+          </div>
+        </div>
+
+        <p class="instructions"> Click Dice To Roll </p>
+      </div>
+
+
+
+      <!-- Playing Card Draw Elements -->
+      <div id="cards">
+
+        <img class="deck-img" src="images/playing_card.png">
+
+        <button class="btn btn-lg btn-danger draw-button" type="button">Draw</button>
+        <button class="btn btn-lg text-white btn-info reshuffle-button" type="button">Reshuffle</button>
+
+
+
+        <div class="row hand">
+
+          <div class="card col-lg-2 bg-white">
+            <div class="card-body">
+              <h1 class="card-val card1"></h1>
+            </div>
+          </div>
+
+          <div class="card col-lg-2 bg-white">
+            <div class="card-body">
+              <h1 class="card-val card2"></h1>
+            </div>
+          </div>
+
+          <div class="card col-lg-2 bg-white">
+            <div class="card-body">
+              <h1 class="card-val card3"></h1>
+            </div>
+          </div>
+
+          <div class="card col-lg-2 bg-white">
+            <div class="card-body">
+              <h1 class="card-val card4"></h1>
+            </div>
+          </div>
+
+          <div class="card col-lg-2 bg-white">
+            <div class="card-body">
+              <h1 class="card-val card5"></h1>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="instructions"> Click Deck To Draw </p>
+
+      </div>
+
+
+
+      <!-- Pandemic Board Game Elements -->
+      <div id="pandemic">
+
+        <button id="new-game" class="btn btn-lg btn-success" type="button">New Game</button>
+
+        <div class="decks row">
+
+          <div class="card col-lg-4 bg-dark infection-card">
+            <div class="card-body infection-deck">
+              <button id="infection-button" class="btn btn-lg btn-danger draw-btn" type="button">Infection Draw</button>
+              <button id="epidemic-button" class="btn btn-lg btn-warning draw-btn" type="button">Epidemic Draw</button>
+            </div>
+          </div>
+
+          <div class="card col-lg-4 infection-card">
+            <div class="card-header infection-color">
+            </div>
+
+            <div class="card-body">
+              <div class="cube-space">
+                <!-- Cube Images Added Here -->
+              </div>
+              <h1 class="card-val infection-city">City</h1>
+            </div>
+          </div>
+
+          <div class="dropdown col-lg-4">
+
+            <label> Infection Pile <br /><input list="infection-pile"/></label>
+            <datalist id="infection-pile">
+            </datalist>
+          </div>
+
+        </div>
+
+        <button id="epidemic-reshuffle" class="btn btn-lg text-white btn-info" type="button">Shuffle In After Epidemic</button>
+
+        <div class="slider-container container">
+
+          <p> Infection Rate  (drag to change): </p>
+          <input id="slider" type="range" min="1" max="7" step=1 value="1" class="slider" list="rate">
+
+          <datalist class="rate">
+            <option class="rate-label" value="1" label="2"></option>
+            <option class="rate-label" value="2" label="2"></option>
+            <option class="rate-label" value="3" label="2"></option>
+            <option class="rate-label" value="4" label="3"></option>
+            <option class="rate-label" value="5" label="3"></option>
+            <option class="rate-label" value="6" label="4"></option>
+            <option class="rate-label" value="7" label="4"></option>
+          </datalist>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="footer">
+      <p> More games to be added! </p>
+      <p> Designed by Philip Lin </p>
+    </section>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/index.js"></script>
+
+  </body>
+
+</html>
