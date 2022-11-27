@@ -202,7 +202,7 @@ p{
   -webkit-appearance: none;
   width: 95%;
   height: 10px;
-  background:#3D8361;
+  background: transparent;
 }
 
 .slider::-webkit-slider-thumb {
