@@ -1,6 +1,5 @@
 //Required packages
 const express = require("express"); //npm install express
-const https = require("node:https");
 const bodyParser = require("body-parser");
 var path = require("path");
 
