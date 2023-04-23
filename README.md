@@ -17,14 +17,16 @@ Front-end development in HTML/CSS, with interactive elements  developed using Ja
 Express framework used for Node.js runtime environment.
 
 
-
 ## High Level Components
-    * Display pages for each game
+    * Display table for games
     * CSS style sheet 
-    * Logic engine
+    * JS logic engine
 
 
 ## Class Overview
+    CSS
+        - styles.css
+    
     JavaScript
         - index.js
     
